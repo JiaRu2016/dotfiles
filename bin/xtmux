@@ -1,9 +1,17 @@
 #! /bin/bash
 
-SESSION_NAME=$(basename $(pwd))
+if [[ "$1" -eq "" ]]; then
+	SESSION_NAME=$1
+	echo "use passed name: $1"
+else
+	SESSION_NAME=$(basename $(pwd))
+	echo "use pwd basename"
+fi
+
 tmux attach-session -d -t $SESSION_NAME
 EXIT_CODE=$?
 
 if [[ "$EXIT_CODE" -ne 0 ]]; then
-  tmux new-session -s $SESSION_NAME
+	tmux new-session -s $SESSION_NAME
 fi
+
