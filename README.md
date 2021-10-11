@@ -1,7 +1,7 @@
 ### deploy
 
 #### xtmux
-```
+```bash
 chmod +x ./bin/xtmux
 
 vim ~/.zshrc
