@@ -1,0 +1,15 @@
+#! /bin/bash
+
+python="$HOME/anaconda3/bin/python"
+
+DIR="$(cd "$(dirname "$0")" && pwd)"
+
+if [[ $1 == "-i" ]]; then
+    is_interactive="-i"
+    shift
+else
+    is_interactive=""
+fi
+
+${python} ${is_interactive} $DIR/ka.py $@
+
