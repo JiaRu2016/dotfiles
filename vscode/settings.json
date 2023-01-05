@@ -1,0 +1,67 @@
+{    
+    "editor.mouseWheelScrollSensitivity": 2,
+    
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.defaultProfile.linux": "zsh",
+
+    // color themes
+    "editor.renderLineHighlight": "all",
+    "workbench.colorCustomizations": {
+        "editor.selectionBackground": "#135564",
+        "editor.selectionHighlightBackground": "#83090f",
+        "editor.lineHighlightBackground": "#3dc4753b",
+        "editor.lineHighlightBorder": "#298155"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "variable.parameter.function.language.special.self.python",
+                    "variable.parameter.function.language.special.cls.python"
+                ],
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#b993be"
+                }
+            },
+            {
+                "scope": [
+                    "variable.parameter"
+                ],
+                "settings": {
+                    "fontStyle": "italic",
+                    "foreground": "#1bb1cc"
+                }
+            }
+        ]
+    },
+
+    // disable automatic add code `import xxx`
+    "typescript.suggest.autoImports": false,
+    "typescript.preferences.includePackageJsonAutoImports": "off",
+    "javascript.suggest.autoImports": false,
+    "python.analysis.autoImportCompletions": false,
+
+    // others
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "window.customMenuBarAltFocus": false,
+    "window.menuBarVisibility": "visible",
+    "window.enableMenuBarMnemonics": false,
+    "files.associations": {
+        "*.jinja": "jinja"
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/figs/": true,
+        "**/node_modules/*/**": true,
+        "**scripts/*.png": true
+    }
+}
